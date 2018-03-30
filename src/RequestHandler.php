@@ -14,6 +14,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use TypeError;
+use Traversable;
 
 /**
  *
@@ -33,10 +34,11 @@ abstract class RequestHandler implements RequestHandlerInterface
      * @param callable $resolver Converts queue entries to middleware
      * instances.
      *
+     * @throws TypeError
      */
     public function __construct($queue, callable $resolver = null)
     {
-        if (! is_iterable($queue)) {
+        if( !is_array( $queue ) && !$queue instanceof \Traversable ) {
             throw new TypeError('\$queue must be array or Traversable.');
         }
 
