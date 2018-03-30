@@ -1,12 +1,12 @@
 {
-    "name": "relay/relay",
+    "name": "mathiastools/relay",
     "type": "library",
     "description": "A PSR-7 middleware dispatcher.",
     "keywords": [
         "middleware",
         "psr-7"
     ],
-    "homepage": "https://github.com/relayphp/Relay.Relay",
+    "homepage": "https://github.com/mathiastools/Relay.Relay",
     "license": "MIT",
     "authors": [
         {
